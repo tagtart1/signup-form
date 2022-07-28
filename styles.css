@@ -1,4 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-left-margin: 42px;
+}
+
 body {
     padding: 0;
     margin: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(211, 211, 211);
+}
+h1 {
+    margin: 0;
+    margin-bottom: 16px;
+}
+img {
+    
+    margin: 0;
+}
+.header-top-text{
+    margin-bottom: 0px;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+}
+
+.header{
+    font-size: 32px;
+    font-weight: bold;
+    width: 70%;
+    margin-left: var(--main-left-margin);
+}
+
+form {
+    
+}
+
+.bottom-text,
+button{
+    margin-left: var(--main-left-margin);
+    margin-top: 24px;
+    font-weight: 500;
+}
+
+button {
+    color:white;
+    background-color: rgb(170, 136, 90);
+    border: none;
+    border-radius: 6px;
+    padding: 16px 8px;
+    font-size: 18px;
+    width: 240px;
+
+    
+}
+
+.header > p {
+    margin-top: 24px;
+}
+
+.form-middle {
+    background-color: rgb(230, 230, 230);
+    padding: 24px 42px;
+    box-shadow: 10px 2px 10px 4px rgb(175, 175, 175);
+    margin-top: 24px;
+}
+
+.form-input-elements {
+    display: flex;
+    gap: 36px;
+}
+
+.signup-form input{
+    border: 1px solid #c9cbcf;
+    border-radius: 4px;
+    background-color: rgb(230, 230, 230);;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(170, 136, 90);
+    font-weight: bold;
 }
