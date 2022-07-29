@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
 
 
+
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -13,6 +14,7 @@
 body {
     padding: 0;
     margin: 0;
+    overflow: hidden;
     display: flex;
     width: 100%;
     height: 100vh;
@@ -21,11 +23,43 @@ body {
 h1 {
     margin: 0;
     margin-bottom: 16px;
+    font-size: 28px;
 }
 img {
-    
+    height: 100%;
     margin: 0;
+    border: none;
 }
+
+
+
+.image-holder {
+    position: relative;
+   
+ }
+
+
+
+ 
+ .image-title-holder{
+     position: absolute;
+     padding: 10px;
+     width: 100%;
+     background-color: rgba(0, 0, 0, 0.322);
+     height: 140px ;
+     top: 20%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .image-title{
+    color: white;
+    font-size: 100px;
+    font-weight: bolder;
+    font-family: 'Norse', 'Roboto';
+    padding-left: 12px;
+ }
 .header-top-text{
     margin-bottom: 0px;
 }
@@ -33,64 +67,101 @@ img {
 .main-content{
     display: flex;
     flex-direction: column;
-    
     justify-content: center;
+    width: 100%;
+    
+    
 }
 
 .header{
-    font-size: 32px;
-    font-weight: bold;
-    width: 70%;
+    font-size: 24px;
+    font-weight: 500;
+    width: 71%;
     margin-left: var(--main-left-margin);
 }
 
-form {
-    
-}
+
 
 .bottom-text,
 button{
     margin-left: var(--main-left-margin);
-    margin-top: 24px;
+    margin-top: 32px;
     font-weight: 500;
 }
 
 button {
     color:white;
-    background-color: rgb(170, 136, 90);
+    background-color: rgb(185, 149, 98);
     border: none;
     border-radius: 6px;
-    padding: 16px 8px;
+    padding: 16px 12px;
     font-size: 18px;
     width: 240px;
-
+    transition-duration: .1s;
     
 }
 
-.header > p {
-    margin-top: 24px;
+button:hover{
+    background-color: rgb(196, 158, 105);
+}
+button:active {
+    background-color: rgb(138, 110, 72);
+    transform: translateY(2px);
 }
 
+
+
 .form-middle {
+    
     background-color: rgb(230, 230, 230);
-    padding: 24px 42px;
+    padding: 24px 42px 0px 42px;
     box-shadow: 10px 2px 10px 4px rgb(175, 175, 175);
     margin-top: 24px;
+    color: rgb(37, 37, 37);
+   
 }
 
 .form-input-elements {
     display: flex;
-    gap: 36px;
+    gap: 64px;
+    width: 100%;
+    
 }
 
-.signup-form input{
+.signup-form input
+{
     border: 1px solid #c9cbcf;
     border-radius: 4px;
-    background-color: rgb(230, 230, 230);;
+    background-color: rgb(230, 230, 230);
+    width: 425px;
+    height: 30px;
+}
+
+.signup-form input:focus{
+
+    border: 1px solid #548bfa;
+    outline: none;
+    box-shadow:  3px 2px 6px 2px rgb(175, 175, 175) ;
+}
+.input-item label{
+    display: block;
+    font-size: 14px;
+}
+
+.input-item {
+    margin-bottom: 32px;
+    font-weight: 450;
+    
 }
 
 a {
     text-decoration: none;
     color: rgb(170, 136, 90);
     font-weight: bold;
+}
+
+
+@font-face{
+    font-family: 'Norse';
+    src: url(norse-bold-webfont.woff2) format('woff2')
 }
