@@ -14,7 +14,7 @@
 body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    
     display: flex;
     width: 100%;
     height: 100vh;
@@ -29,6 +29,7 @@ img {
     height: 100%;
     margin: 0;
     border: none;
+    
 }
 
 
@@ -158,6 +159,30 @@ a {
     text-decoration: none;
     color: rgb(170, 136, 90);
     font-weight: bold;
+}
+
+input[type=password] + div {
+    position: relative;
+}
+
+input[type=password] + div::before{
+   position: absolute;
+   font-size: 12px;
+   top:6px;
+}
+
+input[type=password]:invalid:focus:not(:placeholder-shown) {
+    border: 1px solid rgb(255, 68, 68);
+}
+
+.password:invalid:focus:not(:placeholder-shown) + div::before{
+    content: "*Password requires 8 characters, 1 uppercase, and 1 special!";
+    color: rgb(255, 68, 68);
+    
+}
+
+input[type=email]:invalid:focus:not(:placeholder-shown) {
+    border: 1px solid rgb(255, 68, 68);
 }
 
 
